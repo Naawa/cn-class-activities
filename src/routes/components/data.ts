@@ -86,7 +86,7 @@ export const seniorActivities: Activity[] = [
     },
     {
         name: "Impact",
-        image: "code-spark.svg"
+        image: "code.svg"
     },
     {
         name: "Exploration",
