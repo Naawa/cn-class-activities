@@ -20,7 +20,7 @@
       <use xlink:href="#badge-c"/>
     </mask>
     <use fill="#000000" fill-rule="nonzero" xlink:href="#badge-c"/>
-    <g fill="#1376bd" mask="url(#badge-d)">
+    <g fill="#FFFFFF" mask="url(#badge-d)">
       <rect width="24" height="24" transform="translate(-4 -1)"/>
     </g>
   </g>
