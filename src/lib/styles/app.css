@@ -46,7 +46,17 @@ html,
 body,
 input,
 button {
-    font-size: clamp(10px, 1.6vmax, 1.8svh);
+    font-size: clamp(6px, 1.6vmax, 1.8svh);
+}
+
+@media (width < 600px) {
+
+    html,
+    body,
+    input,
+    button {
+        font-size: 1vh;
+    }
 }
 
 /* 16px */
@@ -57,7 +67,7 @@ body {
     background: linear-gradient(-90deg, #1376bd 30%, #a839b9 80%);
     background-repeat: no-repeat;
     background-size: 150% 150%;
-    min-height: 100svh;
+    min-height: fit-content;
 }
 
 
