@@ -3,7 +3,7 @@ interface Activity {
     image: string,
 }
 
-function getTimeBlocks(weekday: boolean, hour: number) {
+export function getTimeBlocks(weekday: boolean, hour: number) {
     let timeBlocks: Date[] = []
     let minute: number = 0
     if (weekday) {
@@ -27,7 +27,7 @@ function getTimeBlocks(weekday: boolean, hour: number) {
     return timeBlocks
 }
 
-function getSeniorTimeBlocks(weekday: boolean, hour: number, numberOfActivities: number) {
+export function getSeniorTimeBlocks(weekday: boolean, hour: number, numberOfActivities: number) {
     let timeBlocks: Date[] = []
     let minute: number = 0
     if (weekday) {
@@ -51,12 +51,8 @@ function getSeniorTimeBlocks(weekday: boolean, hour: number, numberOfActivities:
     return timeBlocks
 }
 
-export const firstHourTimeBlocks = new Date().getDay() == 6 ? getTimeBlocks(false, 10) : getTimeBlocks(true, 15)
-export const secondHourTimeBlocks = new Date().getDay() == 6 ? getTimeBlocks(false, 11) : getTimeBlocks(true, 16)
-export const thirdHourTimeBlocks = new Date().getDay() == 6 ? getTimeBlocks(false, 12) : getTimeBlocks(true, 17)
-export const lastHourTimeBlocks = new Date().getDay() == 6 ? getTimeBlocks(false, 13) : getTimeBlocks(true, 18)
 
-export const activities: Activity[] = [
+export let activities: Activity[] = [
     {
         name: "Typing",
         image: "keyboard.svg"
@@ -79,7 +75,7 @@ export const activities: Activity[] = [
     },
 ]
 
-export const seniorActivities: Activity[] = [
+export let seniorActivities: Activity[] = [
     {
         name: "Typing",
         image: "keyboard.svg"
@@ -94,7 +90,3 @@ export const seniorActivities: Activity[] = [
     },
 ]
 
-export const seniorFirstHourTimeBlocks = new Date().getDay() == 6 ? getSeniorTimeBlocks(false, 10, seniorActivities.length) : getSeniorTimeBlocks(true, 15, seniorActivities.length)
-export const seniorSecondHourTimeBlocks = new Date().getDay() == 6 ? getSeniorTimeBlocks(false, 11, seniorActivities.length) : getSeniorTimeBlocks(true, 16, seniorActivities.length)
-export const seniorThirdHourTimeBlocks = new Date().getDay() == 6 ? getSeniorTimeBlocks(false, 12, seniorActivities.length) : getSeniorTimeBlocks(true, 17, seniorActivities.length)
-export const seniorLastHourTimeBlocks = new Date().getDay() == 6 ? getSeniorTimeBlocks(false, 13, seniorActivities.length) : getSeniorTimeBlocks(true, 18, seniorActivities.length)
