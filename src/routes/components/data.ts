@@ -17,10 +17,7 @@ export function getTimeBlocks(weekday: boolean, hour: number) {
         let activityTimeBlock = new Date()
         activityTimeBlock.setHours(hour, minute, 0, 0)
         timeBlocks.push(activityTimeBlock)
-        if (i == 1) {
-            minute += 15
-        }
-        else if (i == 4) {
+        if (i == 1 || i == 2) {
             minute += 15
         }
         else {
@@ -61,19 +58,19 @@ export let activities: Activity[] = [
         image: "keyboard.svg"
     },
     {
-        name: "CodeSpark",
+        name: "Math Block",
         image: "code-spark.svg"
     },
     {
-        name: "Mouse Games",
+        name: "Reading Block",
         image: "mouse-games.svg"
     },
     {
-        name: "Code.org",
+        name: "Coding Block",
         image: "code.svg"
     },
     {
-        name: "Free Time",
+        name: "Free Time & Wrap Up",
         image: "free-time.svg"
     },
 ]
