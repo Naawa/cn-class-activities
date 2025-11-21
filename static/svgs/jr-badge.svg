@@ -12,7 +12,7 @@
         <use xlink:href="#badge-a"/>
       </mask>
       <use fill="#D8D8D8" fill-rule="nonzero" xlink:href="#badge-a"/>
-      <g fill="#FFA0A0" mask="url(#badge-b)">
+      <g fill="#ff8548ff" mask="url(#badge-b)">
         <rect width="24" height="24" transform="translate(-9 -8)"/>
       </g>
     </g>
@@ -20,7 +20,7 @@
       <use xlink:href="#badge-c"/>
     </mask>
     <use fill="#000000" fill-rule="nonzero" xlink:href="#badge-c"/>
-    <g fill="#a839b9" mask="url(#badge-d)">
+    <g fill="#6e39b9" mask="url(#badge-d)">
       <rect width="24" height="24" transform="translate(-4 -1)"/>
     </g>
   </g>

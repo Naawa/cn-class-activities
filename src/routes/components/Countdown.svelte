@@ -21,7 +21,7 @@
 </script>
 
 <div class="timer-wrapper">
-	<h3 class="title">Session Timer:</h3>
+	<h3 class="title">Session Timer</h3>
 
 	<div class="countdown">
 		<div class="group">

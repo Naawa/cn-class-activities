@@ -124,7 +124,7 @@
 	}
 	.active {
 		padding: 1em 2em;
-		background-color: #1376bd;
+		background-color: #1346bd;
 		border-radius: 1em;
 		h3,
 		p {
@@ -132,6 +132,6 @@
 		}
 	}
 	.junior {
-		background-color: #a839b9;
+		background-color: #6e39b9;
 	}
 </style>

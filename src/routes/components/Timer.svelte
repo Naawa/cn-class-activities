@@ -42,7 +42,7 @@
 <style>
 	span {
 		width: 100%;
-		background-color: rgb(175, 215, 255);
+		background-color: #cddcff;
 		height: 0.3em;
 		border-radius: 1em;
 		display: flex;
@@ -60,10 +60,10 @@
 		}
 		.active {
 			background-color: #ffffff;
-			outline: solid 0.2em #1376bd;
+			outline: solid 0.2em #1346bd;
 		}
 		.completed {
-			background-color: #1376bd;
+			background-color: #1346bd;
 			outline: none;
 		}
 
@@ -74,15 +74,15 @@
 		}
 		.jr-active {
 			background-color: #ffffff;
-			outline: solid 0.2em #a839b9;
+			outline: solid 0.2em #6e39b9;
 		}
 		.jr-completed {
-			background-color: #a839b9;
+			background-color: #6e39b9;
 			outline: none;
 		}
 	}
 
 	.jr-span {
-		background-color: #f8ccfe;
+			background-color: #e7d6ff;
 	}
 </style>

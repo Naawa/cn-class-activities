@@ -184,10 +184,10 @@
 
 	div {
 		width: fit-content;
-		background-color: #fff4ff;
+		background-color: #fbf7ff;
 		border-radius: 0.75em;
-		color: #a839b9;
-		border: solid 0.3em #a839b9;
+		color: #6e39b9;
+		border: solid 0.3em #6e39b9;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -195,22 +195,22 @@
 		flex-direction: column;
 	}
 	div:last-of-type {
-		background-color: #f4f7ff;
-		border: solid 0.3em #1376bd;
-		color: #1376bd;
+		background-color: #f3f7ff;
+		border: solid 0.3em #1346bd;
+		color: #1346bd;
 	}
 
 	span {
 		width: 95%;
 		height: 0.2em;
-		background-color: #1376bd20;
+		background-color: #1346bd20;
 		border-radius: 1em;
 	}
 
 	.jr-divider {
 		width: 95%;
 		height: 0.2em;
-		background-color: #a839b920;
+		background-color: #6e39b920;
 		border-radius: 1em;
 	}
 </style>

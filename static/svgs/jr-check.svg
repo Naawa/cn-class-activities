@@ -12,7 +12,7 @@
         <use xlink:href="#check-a"/>
       </mask>
       <use fill="#D8D8D8" fill-rule="nonzero" xlink:href="#check-a"/>
-      <g fill="#FFA0A0" mask="url(#check-b)">
+      <g fill="#ff8548ff" mask="url(#check-b)">
         <rect width="24" height="24" transform="translate(-7 -5)"/>
       </g>
     </g>
@@ -20,7 +20,7 @@
       <use xlink:href="#check-c"/>
     </mask>
     <use fill="#000000" fill-rule="nonzero" xlink:href="#check-c"/>
-    <g fill="#a839b9" mask="url(#check-d)">
+    <g fill="#6e39b9" mask="url(#check-d)">
       <rect width="24" height="24" transform="translate(-6 -4)"/>
     </g>
   </g>
