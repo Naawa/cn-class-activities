@@ -4,16 +4,22 @@
 	let minutes = 0;
 	let seconds = 0;
 
-	const tick = () => {
+	function tick() {
 		const now = new Date();
-		const nextHour = new Date(now);
-		nextHour.setHours(now.getHours() + 1, 0, 0, 0);
 
-		const diff = nextHour.getTime() - now.getTime();
+		// Determine the next half-hour mark
+		const next = new Date(now);
 
+		if (now.getMinutes() < 30) {
+			next.setMinutes(30, 0, 0);   // next hh:30
+		} else {
+			next.setHours(now.getHours() + 1, 0, 0, 0); // next hh+1:00
+		}
+
+		const diff = next.getTime() - now.getTime();
 		minutes = Math.floor(diff / 1000 / 60);
 		seconds = Math.floor((diff / 1000) % 60);
-	};
+	}
 
 	tick();
 	const interval = setInterval(tick, 1000);
@@ -29,10 +35,8 @@
 			<span class="label">Min</span>
 		</div>
 
-		<div class="spacer"></div>
-
 		<div class="group">
-			<span class="num">{seconds}</span>
+			<span class="num">{seconds < 10 ? `0${seconds}` : seconds}</span>
 			<span class="label">Sec</span>
 		</div>
 	</div>
@@ -44,34 +48,23 @@
 		flex-direction: column;
 		align-items: center;
 		color: white;
-		font-family: 'Azo Sans Black';
 		margin: 1em;
 		margin-top: 2em;
 	}
 
 	.title {
-		margin-bottom: 0.5em;
 		font-size: 1.6rem;
-		font-weight: 900;
 	}
 
 	.countdown {
 		display: flex;
-		align-items: baseline;
-		justify-content: center;
 		gap: 2rem;
-	}
-
-	.group {
-		display: flex;
 		align-items: baseline;
-		gap: 0.3rem;
 	}
 
 	.num {
-		font-size: 4rem;
+		font-size: 3rem;
 		font-weight: 700;
-		line-height: 1;
 	}
 
 	.label {
@@ -79,6 +72,7 @@
 		font-weight: 900;
 		opacity: 0.9;
 	}
+
 	* {
 		font-family: 'Azo Sans Black';
 	}
