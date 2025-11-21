@@ -6,8 +6,6 @@
 
 	const tick = () => {
 		const now = new Date();
-
-		// Next hour
 		const nextHour = new Date(now);
 		nextHour.setHours(now.getHours() + 1, 0, 0, 0);
 
@@ -19,58 +17,69 @@
 
 	tick();
 	const interval = setInterval(tick, 1000);
-
 	onDestroy(() => clearInterval(interval));
 </script>
 
-<div class="countdown">
-	<div class="group">
-		<span class="num">{minutes}</span>
-		<span class="label">Min</span>
-	</div>
+<div class="timer-wrapper">
+	<h3 class="title">Session Timer:</h3>
 
-	<div class="spacer"></div>
+	<div class="countdown">
+		<div class="group">
+			<span class="num">{minutes}</span>
+			<span class="label">Min</span>
+		</div>
 
-	<div class="group">
-		<span class="num">{seconds}</span>
-		<span class="label">Sec</span>
+		<div class="spacer"></div>
+
+		<div class="group">
+			<span class="num">{seconds}</span>
+			<span class="label">Sec</span>
+		</div>
 	</div>
 </div>
 
 <style>
+	.timer-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: white;
+		font-family: 'Azo Sans Black';
+		margin-top: 2em;
+		margin: 1em;
+	}
+
+	.title {
+		margin-bottom: 0.5em;
+		font-size: 1.6rem;
+		font-weight: 900;
+	}
+
 	.countdown {
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
-		gap: 2rem; /* spacing between Min and Sec groups */
-		color: white;
-		font-family: 'Azo Sans Black';
-		margin: 2em;
-		margin-top: 3em;
+		gap: 2rem;
 	}
 
 	.group {
 		display: flex;
 		align-items: baseline;
-		gap: 0.3rem; /* spacing between number + label */
-		font-family: 'Azo Sans Black';
-
+		gap: 0.3rem;
 	}
 
 	.num {
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
-		font-family: 'Azo Sans Black';
-
 	}
 
 	.label {
 		font-size: 1.8rem;
 		font-weight: 900;
-		line-height: 1;
 		opacity: 0.9;
+	}
+	* {
 		font-family: 'Azo Sans Black';
-
 	}
 </style>

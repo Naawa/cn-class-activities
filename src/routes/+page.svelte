@@ -178,7 +178,7 @@
 		padding: 0;
 		width: 100svw;
 		gap: 4em;
-		min-height: calc(100svh - 16em);
+		min-height: calc(100svh - 18em);
 		position: relative;
 	}
 
