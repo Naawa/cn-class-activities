@@ -45,8 +45,8 @@
 		align-items: center;
 		color: white;
 		font-family: 'Azo Sans Black';
-		margin-top: 2em;
 		margin: 1em;
+		margin-top: 2em;
 	}
 
 	.title {
