@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Activity from './components/Activity.svelte';
 	import Clock from './components/Clock.svelte';
+	import Countdown from './components/Countdown.svelte';
 	import {
 		activities,
 		seniorActivities,
@@ -108,24 +109,18 @@
 
 	function updateTime(): void {
 		now = new Date();
-		if(now.getMinutes() == 0) {
-			setTimeBlocks()
+		if (now.getMinutes() == 0) {
+			setTimeBlocks();
 		}
 		timeBlocks = setHour();
 		seniorTimeblocks = setSeniorHour();
 		setTimeout(updateTime, 1);
 	}
-	setTimeBlocks()
+	setTimeBlocks();
 	updateTime();
 </script>
+<Countdown></Countdown>
 
-<Clock
-	time={now.toLocaleTimeString('en-US', {
-		hour12: true,
-		hour: 'numeric',
-		minute: '2-digit',
-	})}
-></Clock>
 <section>
 	<div>
 		<h1>Junior Activites</h1>
@@ -166,6 +161,13 @@
 		<br />
 	</div>
 </section>
+<Clock
+	time={now.toLocaleTimeString('en-US', {
+		hour12: true,
+		hour: 'numeric',
+		minute: '2-digit'
+	})}
+></Clock>
 
 <style>
 	section {
@@ -176,7 +178,7 @@
 		padding: 0;
 		width: 100svw;
 		gap: 4em;
-		min-height: calc(100svh - 12em);
+		min-height: calc(100svh - 16em);
 		position: relative;
 	}
 
