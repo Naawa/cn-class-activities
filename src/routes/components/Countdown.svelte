@@ -6,14 +6,19 @@
 
 	function tick() {
 		const now = new Date();
-
-		// Determine the next half-hour mark
 		const next = new Date(now);
+		const day = now.getDay(); // 0 = Sunday, 6 = Saturday
 
-		if (now.getMinutes() < 30) {
-			next.setMinutes(30, 0, 0);   // next hh:30
+		// Weekend: always count down to next full hour
+		if (day === 0 || day === 6) {
+			next.setHours(now.getHours() + 1, 0, 0, 0);
 		} else {
-			next.setHours(now.getHours() + 1, 0, 0, 0); // next hh+1:00
+			// Weekday: half-hour cycles
+			if (now.getMinutes() < 30) {
+				next.setMinutes(30, 0, 0, 0);      // next hh:30
+			} else {
+				next.setHours(now.getHours() + 1, 0, 0, 0); // next hh+1:00
+			}
 		}
 
 		const diff = next.getTime() - now.getTime();
