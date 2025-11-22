@@ -66,7 +66,7 @@ export let activities: Activity[] = [
         image: "mouse-games.svg"
     },
     {
-        name: "Exlporation",
+        name: "Exploration",
         image: "free-time.svg"
     },
 ]
