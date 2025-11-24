@@ -9,15 +9,18 @@
 		const next = new Date(now);
 		const day = now.getDay(); // 0 = Sunday, 6 = Saturday
 
-		// Weekend: always count down to next full hour
+		// Weekend: always count down to next full hour (hh:00 -> hh+1:00)
 		if (day === 0 || day === 6) {
 			next.setHours(now.getHours() + 1, 0, 0, 0);
 		} else {
-			// Weekday: half-hour cycles
+			// Weekday: cycles anchored at :30
+			// 3:30 → 4:30, 4:30 → 5:30, etc.
 			if (now.getMinutes() < 30) {
-				next.setMinutes(30, 0, 0, 0);      // next hh:30
+				// From hh:00–hh:29 → up to hh:30
+				next.setMinutes(30, 0, 0);
 			} else {
-				next.setHours(now.getHours() + 1, 0, 0, 0); // next hh+1:00
+				// From hh:30–hh:59 → up to (hh+1):30
+				next.setHours(now.getHours() + 1, 30, 0, 0);
 			}
 		}
 
